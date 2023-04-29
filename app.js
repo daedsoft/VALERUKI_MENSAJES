@@ -72,6 +72,11 @@ for (let i = 0; i < filtersItems.length; i++){
             content = ''
             enableCopiar()
         }  
-        filters.classList.toggle('hide')      
+        filters.classList.toggle('hide') 
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })         
     })
 }

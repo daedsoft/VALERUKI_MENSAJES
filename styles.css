@@ -6,34 +6,40 @@
 
 .header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    background: linear-gradient(#E2BAB3, #fff);
- 
+    padding: 10px; 
+}
+
+.header h1{
+    font-size: 22px;
+    color: #474545;
 }
 
 .logo{
     width: 48px;
-    height: 48px;
+    height: auto;
 }
 
 .main{
-    padding: 10px;
-    margin-bottom: 80px;
+    padding: 10px;    
+    max-width: 360px;
+    margin: 0 auto 80px auto;      
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
 }
 
 .card{
-    border: 1px solid #E2BAB3;
-    padding: 10px;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
     background: linear-gradient(145deg, #eeeeee, #f8f8f8);
-    border-radius: 4px;
-    box-shadow:  7px 7px 14px #cacaca, -7px -7px 14px #f6f6f6;
+    border-radius: 8px;
+    box-shadow:  5px 5px 14px #cacaca, -5px -5px 14px #f6f6f6;
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .card__footer{
@@ -54,32 +60,28 @@ body{
     margin: 10px 0 5px 0;
 }
 
-.footer{
+.filter{
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;    
+    right: 15px;
+    bottom: 15px;
+    background-color: #E2BAB3;    
+    width: 60px;
+    height: 60px;   
+    border: 2px solid #daa9a0;     
+    border-radius: 100px;
+    box-shadow: 0 0 10px #c78377;
+    font-weight: 700;    
     display: flex;
     justify-content: center;
-    align-items: center;    
-}
-
-.filter{
-    background-color: #E2BAB3;
-    padding: 20px 50px;
-    width: 100%;
-    text-align: center;
-    border-radius: 30px 30px 0 0;
-    box-shadow: 0 0 10px #303030;
-    font-weight: 700;
+    align-items: center;
+    cursor: pointer;
 }
 
 .filters{
-    position: absolute;
-    bottom: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 160px);
+    position: fixed;
+    bottom: 15px;
+    right: 90px;    
+    width: 170px;
     background-color: #613942;
     color: #fff;
     font-weight: 600;
@@ -87,11 +89,13 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 10px #202020;
     transition: all .25s;
+    max-width: 360px;    
 }
 
 .filters p{
     margin: 15px 0;
     text-align: center;
+    cursor: pointer;
 }
 
 .hide{
