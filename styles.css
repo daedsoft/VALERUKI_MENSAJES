@@ -24,47 +24,67 @@
 
 .main{
     padding: 10px;    
-    max-width: 360px;
+    max-width: 460px;
     margin: 0 auto 80px auto;      
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #fffcf5;   
 }
 
 .card{
-    border: 1px solid #e5e5e5;
-    padding: 15px;
-    background: linear-gradient(145deg, #eeeeee, #f8f8f8);
-    border-radius: 8px;
+    position: relative;
+    border: 1px solid #ffffff;
+    padding: 30px 15px 15px 15px;
+    background: linear-gradient(145deg, #fff7eb, #ffffff);    
     box-shadow:  5px 5px 14px #cacaca, -5px -5px 14px #f6f6f6;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     width: 100%;
 }
 
-.card__footer{
+.card span{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #c78377;
+    color: #ffffff;
+    padding: 1px 7px;
+    font-size: 12px;
+}
+
+.card p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 24px;
+}
+
+.card__footer{    
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 10px;
+    margin-top: 15px;
+    border-top: 1px solid #c78377;
 }
 
 .btn{
     display: block;    
     background-color: #613942;
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px 25px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 0 5px #ccc;
-    margin: 10px 0 5px 0;
+    border: none;    
+    box-shadow: 1px 1px 5px #4d4d4d; 
+    text-transform: uppercase;   
 }
 
 .filter{
     position: fixed;
     right: 15px;
     bottom: 15px;
-    background-color: #E2BAB3;    
+    background-color: #fde7e3;    
     width: 60px;
     height: 60px;   
     border: 2px solid #daa9a0;     

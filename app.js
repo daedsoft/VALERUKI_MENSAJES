@@ -13,7 +13,7 @@ const enableCopiar = () => {
     for (let i = 0; i < btns.length; i++){
         btns[i].addEventListener('click', () => {
             for (let j = 0; j < btns.length; j++){
-                btns[j].textContent = '¡Copiar!'
+                btns[j].textContent = 'Copiar'
             }
             let target = btns[i].parentElement.previousElementSibling
             let text = target.textContent
@@ -28,10 +28,11 @@ const enableCopiar = () => {
 const main = document.querySelector('.main')
 let content = ''
 messages.map((i) => {
-    content += `<div class="card">                    
+    content += `<div class="card">
+                    <span>${i.categoria}</span>                    
                     <p>${i.mensaje}</p>
                     <div class="card__footer">
-                        <button type="button" class="btn">¡Copiar!</button>
+                        <button type="button" class="btn">Copiar</button>
                     </div>
                 </div>`   
 })
@@ -45,14 +46,15 @@ enableCopiar()
 const filtersItems = document.querySelectorAll('.filters__item')
 for (let i = 0; i < filtersItems.length; i++){
     filtersItems[i].addEventListener('click', () => {
-        if(filtersItems[i].textContent.trim() != "Todos"){
+        if(filtersItems[i].textContent.trim() != "Ver Todos"){
             main.innerHTML = ''
             let filtered = messages.filter(mensaje => mensaje.categoria == filtersItems[i].textContent.trim())
             filtered.map((i) => {
-                content += `<div class="card">                    
+                content += `<div class="card"> 
+                        <span>${i.categoria}</span>                    
                         <p>${i.mensaje}</p>
                         <div class="card__footer">
-                            <button type="button" class="btn">¡Copiar!</button>
+                            <button type="button" class="btn">Copiar</button>
                         </div>
                     </div>`   
             })
@@ -61,7 +63,8 @@ for (let i = 0; i < filtersItems.length; i++){
             enableCopiar()
         }else{
             messages.map((i) => {
-                content += `<div class="card">                    
+                content += `<div class="card">   
+                                <span>${i.categoria}</span>                  
                                 <p>${i.mensaje}</p>
                                 <div class="card__footer">
                                     <button type="button" class="btn">¡Copiar!</button>
